@@ -1,0 +1,49 @@
+h1 {
+  font-weight: 100;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.special-text {
+  color: var(--MediumAquamarine);
+}
+
+.special-text2 {
+  color: var(--White);
+}
+
+p {
+  color: var(--LavenderBlue);
+  font-weight: 100;
+  line-height: 1.5;
+  margin-bottom: 33px;
+}
+
+@media screen and (max-width: 492px) {
+  h1,
+  p {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 1.563rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 31px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 41px;
+    max-width: 57%;
+  }
+}

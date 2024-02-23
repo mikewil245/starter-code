@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --White: #ffffff;
+  --MediumAquamarine: #54e6af;
+  --CharcoalNavy: #2c344b;
+  --MidnightBlue: #121725;
+  --CoolGrey: #5a668a;
+  --LavenderBlue: #c2cbe5;
+  --ChivoFont: "Chivo", sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  overflow-wrap: break-word; /* see how this comes out*/
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--MidnightBlue);
+  font-family: var(--ChivoFont);
+  font-size: 1rem;
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+#email {
+  display: block;
+  border-radius: 28px;
+  border: none;
+  padding: 15px 25px;
+  background-color: var(--CharcoalNavy);
+  min-width: 327px;
+  margin-bottom: 16px;
+}
+
+button {
+  background-color: var(--MediumAquamarine);
+  font-weight: 400;
+  font-size: 0.875rem;
+  display: block;
+  border: none;
+  border-radius: 28px;
+  padding: 15px 25px;
+  cursor: pointer;
+}
+::placeholder {
+  color: rgb(255, 255, 255);
+  font-family: Chivo;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+
+  opacity: 3; /* Firefox */
+}
+/* Not mobile*/
+
+.logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.logo img {
+  width: 20%;
+}
+
+/* Mobile version */
+@media screen and (max-width: 492px) {
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 23, 37, 0.8);
+    z-index: 1;
+  }
+
+  body {
+    position: relative;
+    /* changed from background-image to background(center center/cover) to cover the full page width*/
+    background: url(assets/mobile/image-host.jpg) center center/cover;
+    background-repeat: no-repeat;
+    background-color: rgba(18, 23, 37, 0.8);
+    padding: 25px;
+  }
+
+  main {
+    position: relative;
+    z-index: 3;
+    padding: 50px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 4.2em;
+    align-items: center;
+  }
+
+  button {
+    min-width: 327px;
+  }
+}
+
+/* TABLET VERSION*/
+@media screen and (min-width: 500px) {
+  body {
+    position: relative;
+    overflow-x: hidden;
+    background-image: url(assets/tablet/image-host.jpg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-color: var(--MidnightBlue);
+  }
+
+  main {
+    max-width: 48rem;
+    display: flex;
+    flex-direction: column;
+    gap: 128px;
+  }
+
+  .content-container {
+    background-color: var(--MidnightBlue);
+    padding: 80px 35px;
+    margin-right: 100px;
+    z-index: 1;
+  }
+
+  body::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 6%;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/desktop/bg-pattern-dots.svg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+
+  header {
+    padding: 26px;
+  }
+
+  form {
+    display: flex;
+    position: relative;
+    margin-bottom: 60px;
+  }
+
+  #email {
+    display: block;
+    width: 25rem;
+    padding: 15px 25px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--White);
+    position: relative;
+  }
+
+  button {
+    display: block;
+    width: 8rem;
+    padding: 10px 13px;
+    position: absolute;
+    left: 66.9%;
+    bottom: 21px;
+  }
+
+  .row-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .logo {
+    gap: 30px;
+  }
+
+  .logo img {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 3.25rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+  }
+  .content-container {
+    max-width: 1200px;
+    position: relative;
+  }
+
+  header {
+    position: relative;
+  }
+  body {
+    position: relative;
+    background-image: url(assets/desktop/image-host.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: var(--MidnightBlue);
+  }
+
+  body::after {
+    content: "";
+    position: absolute;
+    top: -5%;
+    bottom: 80%;
+    left: -20;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/desktop/bg-pattern-dots.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .content-container {
+    max-width: 75rem;
+    position: relative;
+    left: 18%;
+  }
+
+  header {
+    position: relative;
+    left: 19%;
+  }
+}
